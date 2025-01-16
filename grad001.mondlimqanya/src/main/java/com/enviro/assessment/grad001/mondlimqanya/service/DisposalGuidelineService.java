@@ -14,7 +14,7 @@ public class DisposalGuidelineService {
     @Autowired
     private DisposalGuidelineRepository disposalGuidelineRepository;
 
-    // Create or Save a DisposalGuideline
+    // Save a DisposalGuideline
     public DisposalGuideline saveDisposalGuideline(DisposalGuideline disposalGuideline) {
         return disposalGuidelineRepository.save(disposalGuideline);
     }

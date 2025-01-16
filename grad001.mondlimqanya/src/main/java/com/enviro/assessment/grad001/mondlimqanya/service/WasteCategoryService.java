@@ -14,7 +14,7 @@ public class WasteCategoryService {
     @Autowired
     private WasteCategoryRepository wasteCategoryRepository;
 
-    // Create or Save a WasteCategory
+    // Save a WasteCategory
     public WasteCategory saveWasteCategory(WasteCategory wasteCategory) {
         return wasteCategoryRepository.save(wasteCategory);
     }

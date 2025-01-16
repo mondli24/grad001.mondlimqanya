@@ -2,7 +2,9 @@ package com.enviro.assessment.grad001.mondlimqanya.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 
+@Data
 @Entity
 public class DisposalGuideline {
 
@@ -16,9 +18,10 @@ public class DisposalGuideline {
     @NotBlank(message = "Guideline cannot be blank")
     private String guideline;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", nullable = false)
     private WasteCategory category;
+
 
     // Constructors
     public DisposalGuideline() {

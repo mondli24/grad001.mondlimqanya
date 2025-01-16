@@ -14,7 +14,7 @@ public class RecyclingTipService {
     @Autowired
     private RecyclingTipRepository recyclingTipRepository;
 
-    // Create or Save a RecyclingTip
+    //Save a RecyclingTip
     public RecyclingTip saveRecyclingTip(RecyclingTip recyclingTip) {
         return recyclingTipRepository.save(recyclingTip);
     }
@@ -24,7 +24,7 @@ public class RecyclingTipService {
         return recyclingTipRepository.findAll();
     }
 
-    // Retrieve a Single RecyclingTip by ID
+    // Retrieve a Single RecyclingTip using ID
     public Optional<RecyclingTip> getRecyclingTipById(Long id) {
         return recyclingTipRepository.findById(id);
     }
